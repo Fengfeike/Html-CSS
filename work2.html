@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #text{
+        width: 200px;
+        height: 30px;
+    }
+    #search{
+        width: 80px;
+        height: 30px;
+        margin-top: 20px;
+        color: gray;
+    }
+    #clear{
+        color: white;
+        float: right;
+    }
+    #msg p{
+        float: left;
+        margin-right: 10px;
+        background-color: gray;
+    }
+    #kuang{
+        width: 400px;
+    }
+    </style>
+</head>
+<body>
+    <input type="search" placeholder="请输入想查找的商品" id="text"/>
+    <input type="button" value="搜索" id="search" onclick="saveStorage();"/>
+    <p id="psou">最近搜索</p>
+    <div id="kuang">
+    <input type="button" value="X" id="clear" onclick="clearStorage();" />
+    <div id="msg">
+
+
+    </div>
+    </div>
+    <script>
+        function saveStorage(){
+            var date = new Date().getTime();//作为value
+            var text1= document.getElementById('text').value;//作为key值
+            localStorage.setItem(date,text1);//(key,value)
+            var node = document.createElement("p");
+            node.innerText=localStorage.getItem(date);
+            var msg = document.getElementById('msg');
+            msg.appendChild(node);
+            document.getElementById('text').value="";
+            document.getElementById('psou').innerText = "最近搜索";
+                if(text1==""){
+                    alert("输入为空");
+                }
+                // for(var i = 0;i<localStorage.length;i++){
+                //     var str="";
+                //     str+=str.concat(msg.childNodes);
+                // }
+                // if(str.includes(text1)){
+                //     alert("重复搜索");
+                // }
+            }
+        function clearStorage(){
+        localStorage.clear();
+        var msg = document.getElementById('msg');
+        msg.innerText='';
+        document.getElementById('psou').innerText = "当前无存储";
+        }
+    </script>
+</body>
+</html>
