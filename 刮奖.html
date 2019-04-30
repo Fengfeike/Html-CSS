@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>刮奖效果</title>
+    <style>
+        #thanks{
+            width: 350px;
+            height: 200px;
+            position: absolute;
+            background:url(xiexie.jpg) no-repeat;
+            background-size: 240px 200px;
+        }
+        #canvas{
+            position: absolute;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="thanks">
+    </div>
+    <canvas id="canvas" width="350px" height="200px">
+    </canvas>
+    <script>
+        //覆盖层涂色
+        var canvas=document.getElementById("canvas");
+        var cxt=canvas.getContext('2d');
+        cxt.beginPath();
+        cxt.fillStyle='lightgray';
+        cxt.fillRect(0,0,350,200);
+        //刮开
+        canvas.onmousedown=function(){
+            canvas.onmousemove=function(){
+                var x=event.clientX;
+                var y=event.clientY;
+                cxt.globalCompositeOperation='destination-out';
+                cxt.beginPath();
+                cxt.arc(x,y,20,0,2*Math.PI);
+                cxt.fill();
+                canvasClear();
+            }
+            canvas.onmouseup=function(){
+                canvas.onmousemove=function(){
+
+                }
+            }
+            //判断刮奖区域是否大于85%
+            function canvasClear(){
+                var imgData=cxt.getImageData(0,0,350,200);
+                var area=0;
+                for(var i=0;i<imgData.data.length;i+=4){
+                    if(imgData.data[i]==0){
+                        area++;
+                    }
+                    if(area>=0.85*200*300){
+                        cxt.clearRect(0,0,350,200);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
