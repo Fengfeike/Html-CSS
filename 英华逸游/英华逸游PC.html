@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>英华逸游PC版</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+    *{
+        padding: 0;
+        margin: 0 auto;
+    }
+    #body{
+        width: 1180px;
+        background-color: rgb(225,225,225);
+        height: 4000px;
+    }
+    #top{
+        height: 40px;
+        background-color: rgb(40,40,40);
+        color: lightgray;
+        text-align: right;
+        padding-right: 50px;
+    }
+    #top-p{
+        display: inline;
+        margin-left: 10px;
+    }
+
+    #nav{
+        width: 1180px;
+        height: 80px;
+        float: left;
+    }
+    #nav-p{
+        display: inline;
+        margin-left: 40px;
+        text-align: center;
+        font-size: 20px;
+        
+    }
+    #nav-img{
+        margin-left: 100px;
+        margin-right: 70px;
+    }
+
+    #box{
+        width:1180px;
+        height: 370px;
+        position:relative;
+        overflow: hidden;
+    }
+
+    #box-b1-p1{
+        font-size: 30px;
+        color: white;
+        margin-top: 20px;
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+    #box1{
+        box-shadow: 5px black;
+        width: 500px;
+
+    }
+    #banner2{
+        padding-left: 100px;
+        margin-top: 30px;
+    }
+    #banner2-div{
+        background-color: rgb(20,49,109);
+        height: 300px;
+        width: 200px;
+        float: right;
+        margin-right: 109px;
+    }
+    #banner2-img{
+        text-align: center;
+        margin-top: 50px;
+    }
+    #banner2-p{
+        color: white;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    #banner2-div2{
+        border: solid 1px white;
+        font-size: 18px;
+        color: white;
+        width: 100px;
+        margin-top: 30px;
+        border-radius: 5px;
+    }
+
+    #ptr{
+        width: 500px;
+        text-align: center;
+    }
+    #ptr1{
+        margin-left: 20px;
+        font-size: 30px;
+        margin-top: 30px;
+    }
+    #ptr2{
+        font-size: 15px;
+        margin-left: 15px;
+    }
+    #ptr3{
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    #hot{
+        height: 1000px;
+        padding-left: 100px;
+        margin-top: 30px;
+    }
+    #hot-left{
+        width: 485px;
+        height: 610px;
+        float: left;
+        margin-left: 100px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    #hot-left1{
+        width: 485px;
+        height: 300px;
+        float: left;
+        margin-bottom: 10px;
+        overflow: hidden;
+        
+    }
+    #hot-left-p{
+        width: 465px;
+        height: 50px;
+        background-color: black;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+    #hot-left-p1{
+        font-size: 15px;
+        color:white;
+        display:inline;
+        
+    }
+    #hot-left-p2{
+        font-size: 20px;
+        color: white;
+        display: inline;
+    }
+    #hot-right{
+        width: 480px;
+        height: 610px;
+        float: left;
+        margin-left: 5px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    #hot-right1{
+        width: 480px;
+        height: 200px;
+        float: left;
+        margin-bottom: 5px;
+        overflow: hidden;
+    }
+    #hot-right-p{
+        background-color: black;
+        opacity: 0.1;
+        width: 460px;
+        height: 50px;
+        float: left;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    #Visa-left{
+        margin-left: 100px;
+        float: left;
+        height: 500px;
+        width: 400px;
+        margin-right: 5px;
+        overflow: hidden;
+    }
+    #Visa-left-p{
+        background-color: black;
+        opacity: 0.4;
+        height: 10px;
+        width: 360px;
+        padding: 20px;
+    }
+    #Visa-left-p1{
+        font-size: 15px;
+        display: inline;
+        color: white;
+    }
+    #Visa-left-p2{
+        font-size: 20px;
+        display: inline;
+        color: white;
+    }
+
+    #Visa-center{
+        float: left;
+        height: 500px;
+        width: 280px;
+        margin-right: 5px;
+        
+    }
+    #Visa-center1{
+        float: left;
+        height: 245px;
+        width: 280px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        overflow: hidden;
+    }
+    #Visa-center-p{
+        background-color: black;
+        opacity: 0.4;
+        height: 30px;
+        width: 280px;
+        padding-left: 20px;
+       
+    }
+    #Visa-center-p1{
+        font-size: 15px;
+        display: inline;
+        text-align:center;
+    }
+    #Visa-center-p2{
+        font-size: 20px;
+        display: inline;
+        text-align: center;
+    }
+    #Visa-right{
+        float: left;
+        height: 500px;
+        width: 280px;
+        margin-bottom: 10px;
+        
+    }
+
+    #back{
+        background-image:url(img/back.png);
+        width: 1180px;
+    }
+    #mission{
+        width: 970px;
+        height: 300px;
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+    #mission1{
+        width: 400px;
+        height: 300px;
+        float: left;
+    }
+    #mission1-right{
+        width:570px;
+        height: 300px;
+        background-color:rgb(28,80,128);
+        opacity: 0.8; 
+        color: white;
+        padding: 50px;
+        text-align: center;
+        float: left;
+        font-size: 15px;
+    }
+    #mission2-p{
+        padding-bottom: 5px;
+        text-align: left;
+        font-size: 14px;
+    }
+    #mission2{
+        margin-left: 100px;
+        width:970px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #bottom1{
+        width: 970px;
+        height: 250px;
+        margin-left: 100px;
+        background-color: rgb(28,80,128);
+        padding-left: 50px;
+    }
+    #bottom1-left{
+        margin-left: 20px;
+        margin-bottom: 20px;
+        float: left;
+        padding-top: 20px;
+        margin-right: 30px;
+    }
+    #icon{
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #img{
+        width: 150px;
+        height: 150px;
+    }
+    #img1{
+        margin-top: -115px;
+        margin-left: 55px;
+    }
+    #img-p{
+        margin-top: 15px;
+        font-size: 15px;
+        text-align: center;
+        color: white;
+        margin-left: -50px;
+    }
+    #bottom1-p{
+        text-align: center;
+        font-size: 13px;
+        color: white;
+        float: left;
+        width: 240px;
+        margin-top: 20px;
+    }
+    #bottom-p1{
+        text-align: center;
+        font-size: 13px;
+        color: white;
+        float: left;
+        margin-top: 10px;
+    }
+
+    #bottom2{
+        width: 1180px;
+        background-color: black;
+        height: 400px;
+        padding-top:20px;
+        padding-bottom: 40px;
+        padding-left: 100px; 
+    }
+    </style>
+</head>
+<body>
+    <div id="body">
+    <!-- top -->
+    <div id="top">
+        <img src="img/tell.png" alt="">
+        <p style="font-size: 20px" id="top-p">400-808-8682</p>
+        <p style="font-size: 15px" id="top-p">登录</p>
+        <p style="font-size: 15px" id="top-p">|</p>
+        <p style="font-size: 15px" id="top-p">注册</p>
+    </div>
+    <!-- nav -->
+    <div id="nav">
+        <img src="img/logo.png" alt="" id="nav-img">
+        <p id="nav-p">首页</p>
+        <p id="nav-p">热门路线</p>
+        <p id="nav-p">签证推荐</p>
+        <p id="nav-p">使命愿景</p>
+    </div>
+    <!-- banner-->
+    <div id="box">
+        <div id="banner">
+            <div id="generic" class="carousel slide" data-ride="carousel">
+                <!-- 轮播（Carousel）指示标 -->
+                <!-- <ol class="carousel-indicators">
+                <li data-target="#generic" data-slide-to="0" class="active"></li>
+                <li data-target="#generic" data-slide-to="1"></li>
+                </ol> -->
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner" >
+                <div class="item active">
+                    <img alt="First slide" src="img/banner.jpg" >
+                        <div class="carousel-caption">
+                            <div id="box-b1-p1">
+                                <p>悠游古欧洲&nbsp;&nbsp;&nbsp;&nbsp;遍览德法瑞意</p>
+                                <p style="font-size: 15px">巴黎卢浮宫、塞纳河游船、凡尔赛宫<br/>少女峰、大运河游船、金色列车、西庸城堡</p>
+                            </div>
+                    <div id="box1"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img alt="Second slide" src="img/banner2.jpg" >
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                </div>
+                <!-- 轮播（Carousel）导航 -->
+                <a class="left carousel-control" href="#generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner2 -->
+    <div id="banner2">
+        <div>
+            <img src="img/Sbanner2.jpg" alt="" height="300px">
+            <div id="banner2-div">
+                <div id="banner2-img">
+                    <img src="img/car.png" alt="">
+                    <p id="banner2-p">车辆接送</p>
+                    <div id="banner2-div2">
+                        查看详情
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 热门线路 -->
+    <div id="ptr">
+        <div>
+            <p id="ptr1">热&nbsp;&nbsp;门&nbsp;&nbsp;路&nbsp;&nbsp;线</p>
+            <p id="ptr2">Popular&nbsp;tourist&nbsp;routes</p>
+        </div>
+    </div>
+
+    <div id="hot-left">
+        <div id="hot-left1">
+            <img src="img/hot1.jpg" alt="" width="485px" height="300px">
+            <div id="hot-left-p">
+                <p id="hot-left-p1">海南三亚5天4晚，纯玩、4晚红树林度假王国</p>
+                <div>
+                    <p id="hot-left-p1">￥</p>
+                    <p id="hot-left-p2">2580</p>
+                    <p id="hot-left-p1">/人起</p>
+                </div>
+            </div>
+        </div>
+        <div id="hot-left1">
+            <img src="img/hot2.jpg" alt="" width="485px" height="300px">
+            <div id="hot-left-p">
+                <p id="hot-left-p1">德法意瑞欧洲4国，ABCD任意线路由您挑选</p>
+                <div>
+                    <p id="hot-left-p1">￥</p>
+                    <p id="hot-left-p2">7999</p>
+                    <p id="hot-left-p1">/人起</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="hot-right">
+        <div id="hot-right1">
+            <img src="img/hot3.jpg" alt="" width="480px" height="200px">
+            <div id="hot-right-p">
+                <p id="hot-left-p1">曼谷+芭提雅&nbsp;国际五星，赠送2220大礼包，绝无自费</p>
+                <div>
+                    <p id="hot-left-p1">￥</p>
+                    <p id="hot-left-p2">2799</p>
+                    <p id="hot-left-p1">/人起</p>
+                </div>
+            </div>
+        </div>
+        <div id="hot-right1">
+            <img src="img/hot4.jpg" alt="" width="480px" height="200px">
+            <div id="hot-right-p">
+                <p id="hot-left-p1">日本本州游&nbsp;樱花、寿司、温泉、美食</p>
+                <div>
+                    <p id="hot-left-p1">￥</p>
+                    <p id="hot-left-p2">5399</p>
+                    <p id="hot-left-p1">/人起</p>
+                </div>
+            </div>
+        </div>
+        <div id="hot-right1">
+            <img src="img/hot5.jpg" alt="" width="480px" height="200px">
+            <div id="hot-right-p">
+                <p id="hot-left-p1">斯里兰卡7天6晚全景游&nbsp;保证入住2晚香格里拉</p>
+                <div>
+                    <p id="hot-left-p1">￥</p>
+                    <p id="hot-left-p2">7999</p>
+                    <p id="hot-left-p1">/人起</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 签证推荐 -->
+    <div id="ptr">
+        <div>
+            <p id="ptr1">签&nbsp;&nbsp;证&nbsp;&nbsp;推&nbsp;&nbsp;荐</p>
+            <p id="ptr2">Visa&nbsp;recommendation</p>
+            <p id="ptr3">热门：&nbsp;&nbsp;&nbsp;日本&nbsp;&nbsp;&nbsp;马来西亚&nbsp;&nbsp;&nbsp;美国&nbsp;&nbsp;&nbsp;意大利&nbsp;&nbsp;&nbsp;加拿大&nbsp;&nbsp;&nbsp;新加坡</p>
+        </div>
+    </div>
+    <div id="Visa-left">
+        <img src="img/visa1.jpg" alt="" width="400px" height="500px">
+        <div id="Visa-left-p">
+            <p id="Visa-left-p1">日本旅游签证&nbsp;&nbsp;&nbsp;￥</p>
+            <p id="Visa-left-p2">420</p>
+            <p id="Visa-left-p1">/人</p>
+        </div>
+    </div>
+    <div id="Visa-center">
+        <div id="Visa-center1">
+            <img src="img/visa2.jpg" alt="" width="280px" height="245px">
+            <div id="Visa-center-p">
+                <p id="Visa-center-p1">新加坡旅游签证 &nbsp;&nbsp; ￥</p>
+                <p id="Visa-center-p2">370</p>
+                <p id="Visa-center-p1">/人</p>
+            </div>
+        </div>
+        
+        <div id="Visa-center1">
+            <img src="img/visa3.jpg" alt="" width="280px" height="245px">
+            <div id="Visa-center-p">
+                <p id="Visa-center-p1">申根旅游签证 &nbsp;&nbsp; ￥</p>
+                <p id="Visa-center-p2">999</p>
+                <p id="Visa-center-p1">/人</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Visa-right">
+        <div id="Visa-center1">
+            <img src="img/visa4.jpg" alt="" width="280px" height="245px">
+            <div id="Visa-center-p">
+                <p id="Visa-center-p1">马来西亚旅游签证 &nbsp;&nbsp; ￥</p>
+                <p id="Visa-center-p2">450</p>
+                <p id="Visa-center-p1">/人</p>
+            </div>
+        </div>
+        <div id="Visa-center1">
+            <img src="img/visa5.jpg" alt="" width="280px" height="245px">
+            <div id="Visa-center-p">
+                <p id="Visa-center-p1">美国旅游签证 &nbsp;&nbsp; ￥</p>
+                <p id="Visa-center-p2">1380</p>
+                <p id="Visa-center-p1">/人</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="img/Bbanner.jpg" alt="" width="1180px">
+    </div>
+    <!-- 使命与愿景 -->
+    <div id="back">
+        <div id="ptr">
+            <div>
+                <p id="ptr1">使命与愿景</p>
+                <p id="ptr2">让旅游回归本质，体验纯粹旅游</p>
+                </div>
+        </div>
+        <div id="mission">
+            <div id="mission1">
+                <img src="img/mission1.jpg" alt="" width="400px" height="300px">
+            </div>
+            <div id="mission1-right">
+                <p style="font-size: 20px">服务理念及优势</p>
+                <p id="mission2-p" style="margin-top: 30px">&nbsp;&nbsp;“英华逸游”通过重新打造旅游全程中的产品路线设计、出行交通方案、</p>
+                <p id="mission2-p"> 陪游向导服务、增值关怀项目等，为客户提供高品质的旅游体验。英华逸</p>
+                <p id="mission2-p">游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提</p> 
+                <p id="mission2-p">供性价比高的产品和服务。</p> 
+            </div>
+        </div>
+        <div id="mission2">
+            <img src="img/mission2.jpg" alt="" width="970px">
+        </div>
+    </div>
+    
+    <div id="bottom1">
+        <div id="bottom1-left">
+            <div id="img">
+                <img src="img/rorate.png" alt="" width="150px" height="150px">
+                <div id="img1">
+                    <img src="img/icon1.png" alt="" width="45" height="55">
+                    <p id="img-p">品质行程</p>
+                </div>
+            </div>
+            <p id="bottom1-p">旅游达人精心设计、基于口碑反复打磨，全网最好，敢跟任何产品比</p>
+        </div>
+        
+        <div id="bottom1-left">
+            <div id="img">
+                <img src="img/rorate.png" alt="" width="150px" height="150px">
+                <div id="img1">
+                    <img src="img/icon2.png" alt="" width="40" height="55">
+                    <p id="img-p">品质消费</p>
+                </div>
+            </div>
+            <p id="bottom1-p">不推自费，不进垃圾购物店和伪景点</p>
+        </div>
+        <div id="bottom1-left">
+            <div id="img">
+                <img src="img/rorate.png" alt="" width="150px" height="150px">
+                <div id="img1">
+                    <img src="img/icon3.png" alt="" width="45" height="55">
+                    <p id="img-p">品质小团</p>
+                </div>
+            </div>
+            <p id="bottom1-p">独立成团不散拼，只跟亲朋好友一起玩，每天发团</p>
+        </div>
+    </div>
+    <!-- bottom2 -->
+    <div id="bottom2">
+
+    </div>
+</div>
+</body>
+
+<script src="js/jQuery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>
